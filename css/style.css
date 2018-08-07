@@ -124,6 +124,15 @@ p { font-size: 16px; font-weight: 300; }
     }
 }
 
+.name_logo{
+	color: white;
+	font-size: 200%;
+	font-family: 'Roboto', sans-serif;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 /* 2.1. Navigation Bar Brand Logo */
 
 .navbar-brand {
@@ -144,17 +153,20 @@ p { font-size: 16px; font-weight: 300; }
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #FFFFFF;
+	color: #FFFFFF;
+	text-shadow: 2px 2px black;
 	transition: color .10s;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #404040;
+    color: skyblue;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #FFFFFF;
+	color: #FFFFFF;
+	
+	text-shadow: 2px 2px black;
     background-color: transparent;
 	font-weight: 500;
 }
@@ -231,7 +243,9 @@ p { font-size: 16px; font-weight: 300; }
 /* 3. Header Section */
 
 .header-section {
-	background: url(http://via.placeholder.com/1500x795?text=Image) no-repeat center center fixed; 
+	background-image: url('../img/joshua-earle-14603-unsplash.jpg'); 
+	background-repeat: no-repeat;
+	background-position: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -247,7 +261,8 @@ p { font-size: 16px; font-weight: 300; }
 /* 3.1. Header Section Content */
 
 .header-section .header-section-content {
-	color: #FFFFFF;
+	color: whitesmoke;
+	text-shadow: 2px 2px black;
 	position: absolute;
   	top: 50%;
   	left: 50%;
