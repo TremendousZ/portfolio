@@ -77,7 +77,7 @@ $mail->addReplyTo($message['email'], $message['name']);                         
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$message['subject'] = $message['name'] . "has sent feedback on your portfolio";
+$message['subject'] = $message['name'] . " has sent feedback on your portfolio";
 
 $mail->Subject = $message['subject'];
 
