@@ -300,8 +300,8 @@ p { font-size: 16px; font-weight: 300; }
 .about-section img {
 	border-color: white;
   	border-width: 15px;
-  	-moz-border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
-  	border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
+  	-moz-border-image: url(https://tobias-reinhardt.de/img/frame.png) 15 stretch;
+  	border-image: url(https://tobias-reinhardt.de/img/frame.png) 15 stretch;
   	border-style: solid;
   	margin: auto;
 }
@@ -426,11 +426,17 @@ p { font-size: 16px; font-weight: 300; }
 .services-section .services-section-image {
 	text-align: left;
 }
+.img-responsive{
+	position: relative !important;
+	left:50% !important;
+	transform: translateX(-50%) !important;
+}
 
 /* 5.2. Services Section Content */
 
 .services-section h4 {
 	margin-top: 20px;
+	text-align: center;
 }
 
 .services-section p {
@@ -488,6 +494,11 @@ p { font-size: 16px; font-weight: 300; }
 	.services-section .mb-0 p {
 		margin-bottom: 0;
 	}
+	.img-responsive{
+		left:0% !important;
+		transform: translateX(-0%) !important;
+	}
+	
 }
 
 /* 6. Portfolio Section */
@@ -648,9 +659,9 @@ p { font-size: 16px; font-weight: 300; }
 }
 
 .footer-section .social-icons .facebook:hover { color: #3b5998; }
-.footer-section .social-icons .twitter:hover { color: #00b6f1; }
-.footer-section .social-icons .google:hover { color: #df4a32; }
-.footer-section .social-icons .instagram:hover { color: #c32aa3; }
+.footer-section .social-icons .linkedin:hover { color: #00b6f1; }
+.footer-section .social-icons .github:hover { color: #df4a32; }
+.footer-section .social-icons .resume:hover { color: #c32aa3; }
 
 /* 8.2. Footer Section Copyright */
 
