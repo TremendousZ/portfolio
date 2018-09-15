@@ -30,13 +30,13 @@ if(empty($message['message'])){
     $output['messages'][] ='missing message key';
 }
 
-// Sanitize Subject
-$message['subject'] = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
-if(empty($message['subject'])){
-    $output['subject'][] ='No Subject Line';
-}
-// Sanitize Phone number
-$message['phone'] = preg_replace('/[^0-9]/', '', $_POST['phone_number']);
+// // Sanitize Subject
+// $message['subject'] = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+// if(empty($message['subject'])){
+//     $output['subject'][] ='No Subject Line';
+// }
+// // Sanitize Phone number
+// $message['phone'] = preg_replace('/[^0-9]/', '', $_POST['phone_number']);
 
 if($output['success'] !== null){
     http_response_code(422);
