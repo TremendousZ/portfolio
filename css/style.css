@@ -243,7 +243,7 @@ p { font-size: 16px; font-weight: 300; }
 /* 3. Header Section */
 
 .header-section {
-	background-image: url('../img/joshua-earle-14603-unsplash.jpg'); 
+	background-image: url('../img/joshua-earle-14603-unsplash_opt (2).jpg'); 
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
@@ -380,6 +380,11 @@ p { font-size: 16px; font-weight: 300; }
 	margin-bottom: 0;
 }
 
+
+.list-unstyled > li svg{
+	width:35%;
+	height:auto;
+}
 /* 4.4. About Section Responsive Style */
 
 /* PRIMARY SECTION */
@@ -442,6 +447,8 @@ p { font-size: 16px; font-weight: 300; }
 .services-section p {
 	margin-bottom: 0;
 }
+
+
 
 /* 5.3. Services Section Callout */
 
@@ -680,6 +687,16 @@ p { font-size: 16px; font-weight: 300; }
 }
 
 /* 8.3. Footer Section Responsive Style */
+.item > svg{
+	width:20%;
+	height:auto;
+	position: relative;
+	left:50%;
+	transform: translateX(-50%);
+}
+.carousel-inner{
+	top:-8vh;
+}
 
 @media (max-width: 767px) {
 	.footer-section .social-icons .icon-container {
@@ -688,4 +705,23 @@ p { font-size: 16px; font-weight: 300; }
 	.footer-section .social-icons .icon-container:last-child {
 		border: none;
 	}
+	.item > svg{
+		left:0;
+		transform: translateX(0%);
+	}
+	.carousel-inner{
+		top:0vh;
+	}
+	#carouselExampleIndicators{
+		
+	}
 }
+
+
+/* .item > svg{
+	width:20%;
+	height:auto;
+	position: relative;
+	left:50%;
+	transform: translateX(-50%);
+} */

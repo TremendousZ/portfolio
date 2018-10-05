@@ -3,7 +3,7 @@ $(document).ready(function() {
 	// ** Start use of strict
 	
 	"use strict";
-
+	
 	// ** Navigation bar collapse on scroll
 
 	$('#navbar-affix').affix({
