@@ -1,4 +1,5 @@
 <?php
+
 require_once('email_config.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
 foreach($_POST as $key=>$value){
@@ -89,7 +90,7 @@ $mail->Body = "
     from: {$_SERVER['REMOTE_ADDR']}<br>
     email: {$_POST['email']}<br>
     subject: {$_POST['subject']}<br>
-    message: {$_POST['body']}
+    message: {$_POST['message']}
     ";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -103,4 +104,5 @@ if(!$mail->send()) {
 }
 
 echo json_encode($output);
+
 ?>
