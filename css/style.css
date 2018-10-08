@@ -300,8 +300,8 @@ p { font-size: 16px; font-weight: 300; }
 .about-section img {
 	border-color: white;
   	border-width: 15px;
-  	-moz-border-image: url(https://tobias-reinhardt.de/img/frame.png) 15 stretch;
-  	border-image: url(https://tobias-reinhardt.de/img/frame.png) 15 stretch;
+  	/* -moz-border-image: url(https://tobias-reinhardt.de/img/frame.png) 15 stretch;
+  	border-image: url(https://tobias-reinhardt.de/img/frame.png) 15 stretch; */
   	border-style: solid;
   	margin: auto;
 }

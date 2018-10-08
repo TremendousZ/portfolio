@@ -298,21 +298,21 @@
 					</div>			
 				</div>
 				
-				<div class="contact-form">
+				<div class="contact-form" id="#contactMe">
 					<div class="col-md-8 col-md-offset-2">
-						<form method="post" action="./php_mailer/mail_handler.php">
+						<form onsubmit="callMailer()">
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="text" name = 'name' class="form-control custom-height" id="exampleInputEmail1" placeholder="Enter your name">
+									<input type="text" name = 'name' class="form-control custom-height" id="formName" placeholder="Enter your name">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="email" name ="email" class="form-control custom-height" id="exampleInputPassword1" placeholder="Enter your Email Address">
+									<input type="email" name ="email" class="form-control custom-height" id="formEmail" placeholder="Enter your Email Address">
 								</div>
 							</div>
 							<div class="col-md-12">
-								<textarea class="form-control" name = "message" rows="5" id="exampleInputMessage1" placeholder="Enter your Message"></textarea>
+								<textarea class="form-control" name = "message" rows="5" id="formMessage" placeholder="Enter your Message"></textarea>
 							</div>
 
 							<div class="col-md-12 text-center">
@@ -357,8 +357,28 @@
 		<!-- Custom Javascript -->
 		<script src="js/custom.min.js"></script>
 		<script>
-	// 	$('.carousel').carousel('cycle'
-	// );
+			
+			function callMailer(){
+				console.log(arguments);
+						
+				$.ajax(
+					{
+						url: "./php_mailer/mail_handler.php",
+						method:"POST",
+						dataType:"json",
+						data: {
+							name: $('#formName').val(),
+							email:$('#formEmail').val(),
+							message:$('#formMessage').val(),
+						}	
+					}
+
+				).then(successfulEmailSent)
+			}
+
+			function successfulEmailSent(){
+				console.log("email sent successfully")
+			}
 		</script>
 	</body>
 	
