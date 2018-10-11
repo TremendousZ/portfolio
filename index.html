@@ -24,7 +24,7 @@
 	
 	<body data-spy="scroll" data-target="#navbar-affix">
 		
-		<nav class="navbar navbar-default navbar-fixed-top" id="navbar-affix">
+		<nav class="navbar navbar-default navbar-fixed-top navTop" id="navbar-affix">
   			<div class="container">
     			<div class="navbar-header">
       				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -38,7 +38,7 @@
     			</div>
 
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right navText">
 						<li><a href="#home">Home</a></li>
 						<li><a href="#about">About</a></li>
 						<li><a href="#technologies">Technologies</a></li>
@@ -215,14 +215,14 @@
 								</svg>
 						  </div>
 						</div>
-						<a class="left carousel-control" href="#technologies" role="button" data-slide="prev">
+						<!-- <a class="left carousel-control" href="#technologies" role="button" data-slide="prev">
 							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 							<span class="sr-only">Previous</span>
 						  </a>
 						  <a class="right carousel-control" href="#technologies" role="button" data-slide="next">
 							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 							<span class="sr-only">Next</span>
-						  </a>
+						  </a> -->
 					  </div>
 				</div>
 			</div>
@@ -268,7 +268,7 @@
 						</div>
 						
 						<div class="image-wrapper">
-							<div class="col-md-7">
+							<div class="col-md-6" id="sgt">
 								<img src="./img/sgt_tableview.png" class="img-responsive">
 								<div class="image-overlay">
 									<div class="image-overlay-text">
@@ -328,21 +328,27 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="social-icons">	
-						<div class="col-md-3 icon-container">
-							<a href="https://www.facebook.com/john.carlisle.399" target="_blank"><i class="fa fa-facebook facebook" aria-hidden="true"></i></a>
-						</div>
-							
-						<div class="col-md-3 icon-container">
-							<a href="https://www.linkedin.com/in/john-carlisle-91777a68/" target ="_blank"><i class="fa fa-linkedin linkedin" aria-hidden="true"></i></a>
-						</div>
-							
-						<div class="col-md-3 icon-container">
-							<a href="https://github.com/TremendousZ" target="_blank"><i class="fa fa-github github" aria-hidden="true"></i></a>
-						</div>
-							
-						<div class="col-md-3 icon-container">
-							<a href="./img/john-carlisle-resume.pdf" target="_blank"><i class="fa fa-file-pdf-o resume" aria-hidden="true"></i></a>
-						</div>
+							<a href="https://www.facebook.com/john.carlisle.399" target="_blank">
+								<div class="col-md-3 icon-container">
+									<i class="fa fa-facebook facebook" aria-hidden="true"></i>
+								</div>
+							</a>
+						
+							<a href="https://www.linkedin.com/in/john-carlisle-91777a68/" target ="_blank">
+								<div class="col-md-3 icon-container">
+									<i class="fa fa-linkedin linkedin" aria-hidden="true"></i>
+								</div>
+							</a>
+							<a href="https://github.com/TremendousZ" target="_blank">
+								<div class="col-md-3 icon-container">
+									<i class="fa fa-github github" aria-hidden="true"></i>
+								</div>
+							</a>
+							<a href="./img/john-carlisle-resume.pdf" target="_blank">	
+								<div class="col-md-3 icon-container">
+									<i class="fa fa-file-pdf-o resume" aria-hidden="true"></i>
+								</div>
+							</a>
 					</div>
 				</div>
 			</div>

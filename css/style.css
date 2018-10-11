@@ -98,6 +98,10 @@ p { font-size: 16px; font-weight: 300; }
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+ .navTop{
+	background-color: rgba(0,0,0,.4);
+} 
+
 /* COLLAPSED STATE, THIS IS WHAT THE NAVBAR WILL LOOK WHEN THE USER SCROLLS */
 
 @media(min-width: 768px) {
@@ -121,7 +125,8 @@ p { font-size: 16px; font-weight: 300; }
     .navbar-default.affix .nav > li > a:focus {
         color: #FFFFFF;
         border-bottom: none;
-    }
+	}
+
 }
 
 .name_logo{
@@ -143,6 +148,10 @@ p { font-size: 16px; font-weight: 300; }
   	height: 100%;
   	padding: 10px 0;
   	width: auto;
+}
+
+.navText{
+	text-align: right;
 }
 
 /* 2.2. Navigation Bar Links */
@@ -213,7 +222,7 @@ p { font-size: 16px; font-weight: 300; }
 @media (max-width: 767px) {
 	.navbar-default {
 		box-shadow: none;
-        background-color: transparent;
+        background-color: rgba(0, 0, 0, .4);
 	}
 	.navbar-brand {
 		padding: 0 0 0 10px;
@@ -237,7 +246,10 @@ p { font-size: 16px; font-weight: 300; }
         background-color: #222222;
         border: none;
 		box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .3);
-    }
+	}
+	.name_logo{
+		margin-left: 5%;
+	}
 }
 
 /* 3. Header Section */
@@ -577,6 +589,10 @@ p { font-size: 16px; font-weight: 300; }
   	opacity: 1;
 }
 
+#sgt{
+	position: relative;
+	right:25%;
+}
 /* 6.3. Portfolio Section Responsive Style */
 
 
@@ -653,13 +669,13 @@ p { font-size: 16px; font-weight: 300; }
 	border-right: none;
 }
 
-.footer-section .social-icons .icon-container:hover {
+.footer-section .social-icons a:hover {
 	background: #282828;
 	cursor: pointer;
 	transition: all .35s;
 }
 
-.footer-section .social-icons .icon-container a {
+.footer-section .social-icons a {
 	font-size: 36px;
 	color: #585858;
 }
@@ -668,10 +684,10 @@ p { font-size: 16px; font-weight: 300; }
     margin: 0;
 }
 
-.footer-section .social-icons .facebook:hover { color: #3b5998; }
-.footer-section .social-icons .linkedin:hover { color: #00b6f1; }
-.footer-section .social-icons .github:hover { color: #df4a32; }
-.footer-section .social-icons .resume:hover { color: #c32aa3; }
+.footer-section .social-icons a:nth-child(1):hover { color: #3b5998; }
+.footer-section .social-icons a:nth-child(2):hover { color: #00b6f1; }
+.footer-section .social-icons a:nth-child(3):hover { color: #df4a32; }
+.footer-section .social-icons a:nth-child(4):hover { color: #c32aa3; }
 
 /* 8.2. Footer Section Copyright */
 
@@ -710,9 +726,14 @@ p { font-size: 16px; font-weight: 300; }
 		left:0;
 		transform: translateX(0%);
 	}
-	
+
 }
 
+@media (max-width: 992px) {
+	#sgt{
+		right:0;
+	}
+}
 
 /* .item > svg{
 	width:20%;
