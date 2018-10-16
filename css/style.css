@@ -709,9 +709,6 @@ p { font-size: 16px; font-weight: 300; }
 .item > svg{
 	width:20%;
 	height:auto;
-	/* position: relative;
-	left:50%;
-	transform: translateX(-50%); */
 }
 
 
@@ -735,10 +732,3 @@ p { font-size: 16px; font-weight: 300; }
 	}
 }
 
-/* .item > svg{
-	width:20%;
-	height:auto;
-	position: relative;
-	left:50%;
-	transform: translateX(-50%);
-} */

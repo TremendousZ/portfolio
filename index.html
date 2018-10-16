@@ -245,7 +245,7 @@
 								<div class="image-overlay">
 									<div class="image-overlay-text">
 										<h3>getDevJob(you)</h3>
-										<a href="https://www.getdevjob.com" target="_blank">Live Site</a>
+										<a href="https://www.getdevjob.com" target="_blank">Live Site</a><span> | </span>
 										<a href="https://github.com/Firecoded/react_getdevjob" target="_blank">Github</a>
 										<p>08/2018</p>
 									</div>
@@ -259,7 +259,7 @@
 								<div class="image-overlay">
 									<div class="image-overlay-text">
 										<h3>Steady Eats</h3>
-										<a href="https://johncarlisle.design/SteadyEats/" target="_blank">Live Demo</a>
+										<a href="https://johncarlisle.design/SteadyEats/" target="_blank">Live Demo</a><span> | </span>
 										<a href="https://github.com/TremendousZ/SteadyEats" target="_blank">Github</a>
 										<p>07/2018</p>
 									</div>
@@ -273,7 +273,7 @@
 								<div class="image-overlay">
 									<div class="image-overlay-text">
 										<h3>Student Grade Table</h3>
-										<a href="https://www.johncarlisle.design/Student-Grade-Table/" target="_blank">Live Demo</a>
+										<a href="https://www.johncarlisle.design/Student-Grade-Table/" target="_blank">Live Demo</a><span> | </span>
 										<a href="https://github.com/TremendousZ/Student-Grade-Table" target="_blank">Github</a>
 										<p>06/2018</p>
 									</div>
@@ -294,6 +294,7 @@
 					<div class="section-title">
 						<div class="col-md-12">
 							<h1>Contact Me</h1>
+							<p class ="emailSent"></p>
 						</div>
 					</div>			
 				</div>
@@ -303,16 +304,19 @@
 						<form onsubmit="callMailer()">
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="text" name = 'name' class="form-control custom-height" id="formName" placeholder="Enter your name">
+									<div class ="errorName"></div>
+									<input type="text" name = 'name' class="form-control custom-height" id="formName" placeholder="Enter your name" onkeyup="nameRegexCheck()">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="email" name ="email" class="form-control custom-height" id="formEmail" placeholder="Enter your Email Address">
+									<div class ="errorEmail"></div>
+									<input type="email" name ="email" class="form-control custom-height" id="formEmail" placeholder="Enter your Email Address" onkeyup="emailRegexCheck()">
 								</div>
 							</div>
 							<div class="col-md-12">
-								<textarea class="form-control" name = "message" rows="5" id="formMessage" placeholder="Enter your Message"></textarea>
+								<div class="errorMessage"></div>
+								<textarea class="form-control" name = "message" rows="5" id="formMessage" placeholder="Enter your Message" onkeyup="messageRegexCheck()"></textarea>
 							</div>
 
 							<div class="col-md-12 text-center">
@@ -365,6 +369,7 @@
 		<script>
 			
 			function callMailer(){
+				debugger;
 				$.ajax(
 					{
 						url: "./php_mailer/mail_handler.php",
@@ -374,15 +379,47 @@
 							name: $('#formName').val(),
 							email:$('#formEmail').val(),
 							message:$('#formMessage').val(),
-						}	
+						},	
+						success: successfulEmailSent
 					}
 
-				).then(successfulEmailSent)
+				)
 			}
 
 			function successfulEmailSent(){
-				console.log("email sent successfully")
+				$(".emailSent").text("Your message has been sent to John").style("color","green");
 			}
+			
+			function nameRegexCheck (){
+				let name = $("#formName").val();
+				let nameRegex = /[a-zA-Z]+/;
+				if(!nameRegex.test(name)) {
+					$('.errorName').text("Please enter your name using only letter").css("color","red");
+				} else {
+					$('.errorName').text("")
+				}
+			}
+
+			function emailRegexCheck (){
+				let email = $("#formEmail").val();
+				let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				if(!emailRegex.test(email)) {
+					$('.errorEmail').text("Please enter a valid email address").css("color","red");
+				} else {
+					$('.errorEmail').text("")
+				}
+			}
+
+			function messageRegexCheck (){
+				let message = $("#formMessage").val();
+				let messageRegex = /[a-zA-Z]+/;
+				if(!messageRegex.test(message)) {
+					$('.errorMessage').text("Please enter your message using only letter").css("color","red");
+				} else {
+					$('.errorMessage').text("")
+				}
+			}
+
 		</script>
 	</body>
 	
