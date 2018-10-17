@@ -301,7 +301,7 @@
 				
 				<div class="contact-form" id="#contactMe">
 					<div class="col-md-8 col-md-offset-2">
-						<form onsubmit="callMailer()">
+						<form onsubmit="callMailer(event)">
 							<div class="col-md-12">
 								<div class="form-group">
 									<div class ="errorName"></div>
@@ -368,8 +368,8 @@
 		<script src="js/custom.min.js"></script>
 		<script>
 			
-			function callMailer(){
-				debugger;
+			function callMailer(event){
+				event.preventDefault();
 				$.ajax(
 					{
 						url: "./php_mailer/mail_handler.php",
