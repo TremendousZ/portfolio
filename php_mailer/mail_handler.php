@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(E_ALL ^ E_DEPRECATED); // without "~"
+ini_set("display_errors", 1);
 require_once('email_config.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
 foreach($_POST as $key=>$value){
@@ -89,7 +90,7 @@ $mail->Body = "
     name: {$_POST['name']}<br>
     from: {$_SERVER['REMOTE_ADDR']}<br>
     email: {$_POST['email']}<br>
-    subject: {$_POST['subject']}<br>
+    subject: {$message['subject']}<br>
     message: {$_POST['message']}
     ";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
