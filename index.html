@@ -294,7 +294,7 @@
 					<div class="section-title">
 						<div class="col-md-12">
 							<h1>Contact Me</h1>
-							<p class ="emailSent"></p>
+							<p class ="emailSent center"></p>
 						</div>
 					</div>			
 				</div>
@@ -387,7 +387,7 @@
 			}
 
 			function successfulEmailSent(){
-				$(".emailSent").text("Your message has been sent to John").style("color","green");
+				$(".emailSent").text("Your message has been sent to John").css("color","green");
 			}
 			
 			function nameRegexCheck (){
@@ -419,6 +419,10 @@
 					$('.errorMessage').text("")
 				}
 			}
+
+			$('.carousel').carousel({
+   				interval: 3000
+  			});
 
 		</script>
 	</body>
