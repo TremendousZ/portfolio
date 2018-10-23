@@ -320,7 +320,7 @@
 							</div>
 
 							<div class="col-md-12 text-center">
-								<button class="btn btn-default" type="submit">Submit <i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+								<button class="btn btn-default disabled submitButton" type="submit">Submit <i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
 							</div>
 						</form>
 					</div>
@@ -367,9 +367,21 @@
 		<!-- Custom Javascript -->
 		<script src="js/custom.min.js"></script>
 		<script>
+
+			let FormNameRegex = false;
+			let FormEmailRegex = false;
+			let FormMessageRegex = false;
 			
 			function callMailer(event){
 				event.preventDefault();
+				let name = $("#formName").val();
+				let email = $("#formEmail").val();
+				let message = $("#formMessage").val();
+
+				if(name == '' || email == '' || message == ''){
+					$(".emailSent").text("Please fill out all fields before submitting").css("color","red");
+					return;
+				}
 				$.ajax(
 					{
 						url: "./php_mailer/mail_handler.php",
@@ -388,15 +400,24 @@
 
 			function successfulEmailSent(){
 				$(".emailSent").text("Your message has been sent to John").css("color","green");
+				formNameRegex = false;
+				formEmailRegex = false;
+				formMessageRegex = false;
 			}
+			
 			
 			function nameRegexCheck (){
 				let name = $("#formName").val();
-				let nameRegex = /[a-zA-Z]+/;
+				let nameRegex = /^[a-zA-Z\s]*$/;
 				if(!nameRegex.test(name)) {
 					$('.errorName').text("Please enter your name using only letter").css("color","red");
+					$(".submitButton").addClass("disabled");
 				} else {
 					$('.errorName').text("")
+					formNameRegex = true;
+					if(formNameRegex == true && formEmailRegex == true && formMessageRegex == true){
+						$(".submitButton").removeClass("disabled");
+					}
 				}
 			}
 
@@ -405,18 +426,28 @@
 				let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 				if(!emailRegex.test(email)) {
 					$('.errorEmail').text("Please enter a valid email address").css("color","red");
+					$(".submitButton").addClass("disabled");
 				} else {
 					$('.errorEmail').text("")
+					formEmailRegex = true;
+					if(formNameRegex == true && formEmailRegex == true && formMessageRegex == true){
+						$(".submitButton").removeClass("disabled");
+					}
 				}
 			}
 
 			function messageRegexCheck (){
 				let message = $("#formMessage").val();
-				let messageRegex = /[a-zA-Z]+/;
+				let messageRegex = /^[a-zA-Z\s]*$/;
 				if(!messageRegex.test(message)) {
 					$('.errorMessage').text("Please enter your message using only letter").css("color","red");
+					$(".submitButton").addClass("disabled");
 				} else {
 					$('.errorMessage').text("")
+					formMessageRegex = true;
+					if(formNameRegex == true && formEmailRegex == true && formMessageRegex == true){
+						$(".submitButton").removeClass("disabled");
+					}
 				}
 			}
 
