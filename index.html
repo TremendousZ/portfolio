@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+		<meta name="Description" content="Welcome to my portfolio page. I am beginning a career in web development and built a portfolio to show off my projects.">
 		<title>John Carlisle's Portfolio</title>
 		
 		<!-- Bootstrap CSS -->
@@ -245,8 +245,8 @@
 								<div class="image-overlay">
 									<div class="image-overlay-text">
 										<h3>getDevJob(you)</h3>
-										<a href="https://www.getdevjob.com" target="_blank">Live Site</a><span> | </span>
-										<a href="https://github.com/Firecoded/react_getdevjob" target="_blank">Github</a>
+										<a href="https://www.getdevjob.com" rel="nofollow" target="_blank">Live Site</a><span> | </span>
+										<a href="https://github.com/Firecoded/react_getdevjob" rel="nofollow" target="_blank">Github</a>
 										<p>08/2018</p>
 									</div>
 								</div>
@@ -259,8 +259,8 @@
 								<div class="image-overlay">
 									<div class="image-overlay-text">
 										<h3>Steady Eats</h3>
-										<a href="https://johncarlisle.design/SteadyEats/" target="_blank">Live Demo</a><span> | </span>
-										<a href="https://github.com/TremendousZ/SteadyEats" target="_blank">Github</a>
+										<a href="https://johncarlisle.design/SteadyEats/" target="_blank" rel="nofollow">Live Demo</a><span> | </span>
+										<a href="https://github.com/TremendousZ/SteadyEats" target="_blank" rel="nofollow">Github</a>
 										<p>07/2018</p>
 									</div>
 								</div>
@@ -273,8 +273,8 @@
 								<div class="image-overlay">
 									<div class="image-overlay-text">
 										<h3>Student Grade Table</h3>
-										<a href="https://www.johncarlisle.design/Student-Grade-Table/" target="_blank">Live Demo</a><span> | </span>
-										<a href="https://github.com/TremendousZ/Student-Grade-Table" target="_blank">Github</a>
+										<a href="https://www.johncarlisle.design/Student-Grade-Table/" target="_blank" rel="nofollow">Live Demo</a><span> | </span>
+										<a href="https://github.com/TremendousZ/Student-Grade-Table" target="_blank" rel="nofollow">Github</a>
 										<p>06/2018</p>
 									</div>
 								</div>
@@ -332,23 +332,23 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="social-icons">	
-							<a href="https://www.facebook.com/john.carlisle.399" target="_blank">
+							<a href="https://www.facebook.com/john.carlisle.399" rel="nofollow" target="_blank">
 								<div class="col-md-3 icon-container">
 									<i class="fa fa-facebook facebook" aria-hidden="true"></i>
 								</div>
 							</a>
 						
-							<a href="https://www.linkedin.com/in/john-carlisle-91777a68/" target ="_blank">
+							<a href="https://www.linkedin.com/in/john-carlisle-91777a68/" rel="nofollow" target ="_blank">
 								<div class="col-md-3 icon-container">
 									<i class="fa fa-linkedin linkedin" aria-hidden="true"></i>
 								</div>
 							</a>
-							<a href="https://github.com/TremendousZ" target="_blank">
+							<a href="https://github.com/TremendousZ" rel="nofollow" target="_blank">
 								<div class="col-md-3 icon-container">
 									<i class="fa fa-github github" aria-hidden="true"></i>
 								</div>
 							</a>
-							<a href="./img/john-carlisle-resume.pdf" target="_blank">	
+							<a href="./img/john-carlisle-resume.pdf" rel="nofollow" target="_blank">	
 								<div class="col-md-3 icon-container">
 									<i class="fa fa-file-pdf-o resume" aria-hidden="true"></i>
 								</div>
@@ -409,7 +409,7 @@
 			function nameRegexCheck (){
 				let name = $("#formName").val();
 				let nameRegex = /^[a-zA-Z\s]*$/;
-				if(!nameRegex.test(name)) {
+				if(!nameRegex.test(name)|| name == "") {
 					$('.errorName').text("Please enter your name using only letter").css("color","red");
 					$(".submitButton").addClass("disabled");
 				} else {
@@ -424,7 +424,7 @@
 			function emailRegexCheck (){
 				let email = $("#formEmail").val();
 				let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-				if(!emailRegex.test(email)) {
+				if(!emailRegex.test(email)|| email =="") {
 					$('.errorEmail').text("Please enter a valid email address").css("color","red");
 					$(".submitButton").addClass("disabled");
 				} else {
@@ -439,11 +439,11 @@
 			function messageRegexCheck (){
 				let message = $("#formMessage").val();
 				let messageRegex = /^[a-zA-Z\s]*$/;
-				if(!messageRegex.test(message)) {
+				if(!messageRegex.test(message)|| message =="") {
 					$('.errorMessage').text("Please enter your message using only letter").css("color","red");
 					$(".submitButton").addClass("disabled");
 				} else {
-					$('.errorMessage').text("")
+					$('.errorMessage').text("");
 					formMessageRegex = true;
 					if(formNameRegex == true && formEmailRegex == true && formMessageRegex == true){
 						$(".submitButton").removeClass("disabled");
