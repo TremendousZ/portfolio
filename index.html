@@ -373,6 +373,7 @@
 			let FormMessageRegex = false;
 			
 			function callMailer(event){
+				$('body').css('cursor','wait');
 				event.preventDefault();
 				let name = $("#formName").val();
 				let email = $("#formEmail").val();
@@ -392,25 +393,34 @@
 							email:$('#formEmail').val(),
 							message:$('#formMessage').val(),
 						},	
-						success: successfulEmailSent
+						success: successfulEmailSent,
+						error: emailFailed,
 					}
 
 				)
 			}
 
 			function successfulEmailSent(){
+				$('body').css('cursor','default');
 				$(".emailSent").text("Your message has been sent to John").css("color","green");
 				formNameRegex = false;
 				formEmailRegex = false;
 				formMessageRegex = false;
 			}
 			
+			function emailFailed(){
+				$('body').css('cursor','default');
+				$(".emailSent").text("Your message failed to send").css("color","red");
+				formNameRegex = false;
+				formEmailRegex = false;
+				formMessageRegex = false;
+			}
 			
 			function nameRegexCheck (){
 				let name = $("#formName").val();
 				let nameRegex = /^[a-zA-Z\s]*$/;
 				if(!nameRegex.test(name)|| name == "") {
-					$('.errorName').text("Please enter your name using only letter").css("color","red");
+					$('.errorName').text("Please enter your name using only letters").css("color","red");
 					$(".submitButton").addClass("disabled");
 				} else {
 					$('.errorName').text("")
@@ -440,7 +450,7 @@
 				let message = $("#formMessage").val();
 				let messageRegex = /^[a-zA-Z\s]*$/;
 				if(!messageRegex.test(message)|| message =="") {
-					$('.errorMessage').text("Please enter your message using only letter").css("color","red");
+					$('.errorMessage').text("Please enter your message using only letters").css("color","red");
 					$(".submitButton").addClass("disabled");
 				} else {
 					$('.errorMessage').text("");

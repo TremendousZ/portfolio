@@ -99,6 +99,7 @@ $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
     $output['success'] = false;
+    http_response_code(500);
     $output['messages'][] = $mail->ErrorInfo;
 } else {
     $output['success'] = true;
