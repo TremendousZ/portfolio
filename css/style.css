@@ -206,6 +206,8 @@ p { font-size: 16px; font-weight: 300; }
 	.name_logo{
 		margin-left: 5%;
 	}
+
+
 }
 
 /* 3. Header Section */
@@ -221,7 +223,7 @@ p { font-size: 16px; font-weight: 300; }
 	/*background: #24C6DC;  /* fallback for old browsers */
 	/*background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
 	/*background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	height: 100%;
+	height: 60%;
 	width: 100%;
 	position: relative;
 }
@@ -246,6 +248,22 @@ p { font-size: 16px; font-weight: 300; }
 .header-section .header-section-content p {
 	margin-bottom: 0;
 }
+.header-section-content{
+	width:100%;
+	height:auto;
+}
+
+.header-section-content video{
+	width: 100%;
+    height: 115%;
+}
+.content{
+	position: fixed;
+    bottom: 15%;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
 
 /* 3.2. Header Section Responsive Style */
 
@@ -254,6 +272,12 @@ p { font-size: 16px; font-weight: 300; }
 		line-height: 25px;
 		width: 100%;
 	}
+
+	.header-section-content video{
+		width: auto;
+		height: 115%;
+	}
+	
 }
 
 /* 4. About Section */
@@ -455,6 +479,13 @@ p { font-size: 16px; font-weight: 300; }
 }
 .services-section {
     text-align: center;
+}
+
+.technologies{
+	display: table;
+}
+.technologies svg{
+	width:15%;
 }
 
 /* 5.4. Services Section Responsive Style */
