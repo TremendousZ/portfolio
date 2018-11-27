@@ -1,47 +1,3 @@
-/*------------------------------------------------------------------
-[Master Stylesheet]
-
-Project: Jason - Responsive Portfolio Template
-Version: 1.0
-Last change: 19/06/2017 [RELEASE]
--------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------
-[Table of contents]
-
-1. Body and HTML
-	1.1. Body Typography
-	1.2. Body Responsive Typography
-	1.3. Body Paddings
-2. Navigation Bar
-	2.1. Navigation Bar Brand Logo
-	2.2. Navigation Bar Links
-	2.3. Navigation Bar Dropdown
-	2.4. Navigation Bar Toggle
-	2.5. Navigation Bar Responsive Style
-3. Header Section
-	3.1. Header Section Content
-	3.2. Header Section Responsive Style
-4. About Section
-	4.1. About Section Image
-	4.2. About Section Description
-	4.3. About Section (Secondary)
-	4.4. About Section Responsive Style
-5. Services Section
-	5.1. Services Section Image
-	5.2. Services Section Content
-	5.3. Services Section Callout
-	5.4. Services Section Responsive Style
-6. Portfolio Section
-	6.1. Portfolio Section Content
-	6.2. Portfolio Section Content (Images)
-7. Contact Section
- 	7.1. Contact Section Form
-8. Footer Section
-	8.1. Footer Section Social Icons
-	8.2. Footer Section Copyright
-	8.3. Footer Section Responsive Style
--------------------------------------------------------------------*/
 
 /* 1. Body and HTML */
 
@@ -255,13 +211,13 @@ p { font-size: 16px; font-weight: 300; }
 /* 3. Header Section */
 
 .header-section {
-	background-image: url('../img/joshua-earle-14603-unsplash_opt (2).jpg'); 
+	/* background-image: url(''); 
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover; */
 	/*background: #24C6DC;  /* fallback for old browsers */
 	/*background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
 	/*background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
