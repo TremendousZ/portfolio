@@ -546,7 +546,8 @@ p { font-size: 16px; font-weight: 300; }
 	display: inline-block;
 	width: 40%;
 	align-self: center;
-    padding: 0% 2% 2% 2%;
+	padding: 0% 2% 2% 2%;
+	font-family: 'Roboto', sans-serif;
 }
 
 
@@ -737,7 +738,24 @@ p { font-size: 16px; font-weight: 300; }
 		left:0;
 		transform: translateX(0%);
 	}
+	.image-wrapper{
+		display: inline-block;
+	}
+	
+	.image-wrapper p{
+		display: block;
+		width: 80%;
+		align-self: center;
+		padding: 0% 2% 2% 2%;
+		margin: 2% auto;
 
+	}
+	
+	.image-wrapper .pic-link{
+		display:block;
+		width:80%;
+		margin: 2% auto;
+	}
 }
 
 @media (max-width: 992px) {
