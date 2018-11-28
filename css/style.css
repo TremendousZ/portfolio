@@ -482,10 +482,13 @@ p { font-size: 16px; font-weight: 300; }
 }
 
 .technologies{
-	display: table;
+	display: block;
 }
 .technologies svg{
-	width:15%;
+	width: 15%;
+    display: inline-block;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }
 
 /* 5.4. Services Section Responsive Style */
@@ -533,6 +536,31 @@ p { font-size: 16px; font-weight: 300; }
 
 /* 6.2. Portfolio Section Content (Images) */
 
+.image-wrapper{
+	margin: 3%;
+	display: inline-flex;
+	justify-content: center;
+}
+
+.image-wrapper p{
+	display: inline-block;
+	width: 40%;
+	align-self: center;
+    padding: 0% 2% 2% 2%;
+}
+
+
+.image-wrapper .pic-link{
+	display: inline-block;
+	width:40%;
+}
+.image-overlay{
+	box-shadow: 2px 2px 5px darkslategrey;
+}
+.img-responsive{
+	box-shadow: 2px 2px 5px darkslategrey;
+}
+
 .portfolio-section .image-wrapper .image-overlay-text {
 	visibility:hidden;
   	position: absolute;
@@ -578,7 +606,6 @@ p { font-size: 16px; font-weight: 300; }
 
 #sgt{
 	position: relative;
-	right:25%;
 }
 /* 6.3. Portfolio Section Responsive Style */
 
