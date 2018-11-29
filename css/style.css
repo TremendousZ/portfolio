@@ -556,11 +556,24 @@ p { font-size: 16px; font-weight: 300; }
 #technologies{
 	display: block;
 }
-#technologies svg{
-	width: 15%;
+#technologies .dev-icon{
+	width: 25%;
     display: inline-block;
     margin-right: 5%;
     margin-bottom: 5%;
+}
+.dev-icon svg{
+	margin:0 auto;
+}
+
+.dev-icon p {
+	text-transform:uppercase;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 5%;
+	white-space: nowrap;
+	font-size: 1em;
+	text-align:center;
 }
 
 /* 5.4. Services Section Responsive Style */
@@ -587,6 +600,10 @@ p { font-size: 16px; font-weight: 300; }
 
 /* 6. Portfolio Section */
 
+.pic-link{
+	padding-left:0px !important;
+	padding-right:0px !important;
+}
 .portfolio-section {
 	background: #F8F8F8;
 	padding-bottom: 80px;
