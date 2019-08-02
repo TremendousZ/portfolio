@@ -1,47 +1,3 @@
-/*------------------------------------------------------------------
-[Master Stylesheet]
-
-Project: Jason - Responsive Portfolio Template
-Version: 1.0
-Last change: 19/06/2017 [RELEASE]
--------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------
-[Table of contents]
-
-1. Body and HTML
-	1.1. Body Typography
-	1.2. Body Responsive Typography
-	1.3. Body Paddings
-2. Navigation Bar
-	2.1. Navigation Bar Brand Logo
-	2.2. Navigation Bar Links
-	2.3. Navigation Bar Dropdown
-	2.4. Navigation Bar Toggle
-	2.5. Navigation Bar Responsive Style
-3. Header Section
-	3.1. Header Section Content
-	3.2. Header Section Responsive Style
-4. About Section
-	4.1. About Section Image
-	4.2. About Section Description
-	4.3. About Section (Secondary)
-	4.4. About Section Responsive Style
-5. Services Section
-	5.1. Services Section Image
-	5.2. Services Section Content
-	5.3. Services Section Callout
-	5.4. Services Section Responsive Style
-6. Portfolio Section
-	6.1. Portfolio Section Content
-	6.2. Portfolio Section Content (Images)
-7. Contact Section
- 	7.1. Contact Section Form
-8. Footer Section
-	8.1. Footer Section Social Icons
-	8.2. Footer Section Copyright
-	8.3. Footer Section Responsive Style
--------------------------------------------------------------------*/
 
 /* 1. Body and HTML */
 
@@ -81,9 +37,24 @@ p { font-size: 16px; font-weight: 300; }
 
 /* 1.3. Body Paddings */
 
-@media(min-width: 768px) {
-	.pb-30 {
-		padding-bottom: 30px;
+@media(min-width: 768px) and (max-width: 1199px) {
+	
+	.header-section-content{
+		width:100%;
+		height:100%;
+		
+	}
+	
+	.header-section-content video{
+		width: 100%;
+		height: 115%;
+	}
+	.content{
+		position: fixed;
+		bottom: 10%;
+		color: #f1f1f1;
+		width: 100%;
+		padding: 20px;
 	}
 }
 
@@ -97,6 +68,10 @@ p { font-size: 16px; font-weight: 300; }
     padding: 15px 0;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+ .navTop{
+	background-color: rgba(0,0,0,.4);
+} 
 
 /* COLLAPSED STATE, THIS IS WHAT THE NAVBAR WILL LOOK WHEN THE USER SCROLLS */
 
@@ -121,7 +96,8 @@ p { font-size: 16px; font-weight: 300; }
     .navbar-default.affix .nav > li > a:focus {
         color: #FFFFFF;
         border-bottom: none;
-    }
+	}
+
 }
 
 .name_logo{
@@ -143,6 +119,10 @@ p { font-size: 16px; font-weight: 300; }
   	height: 100%;
   	padding: 10px 0;
   	width: auto;
+}
+
+.navText{
+	text-align: right;
 }
 
 /* 2.2. Navigation Bar Links */
@@ -213,7 +193,7 @@ p { font-size: 16px; font-weight: 300; }
 @media (max-width: 767px) {
 	.navbar-default {
 		box-shadow: none;
-        background-color: transparent;
+        background-color: rgba(0, 0, 0, .4);
 	}
 	.navbar-brand {
 		padding: 0 0 0 10px;
@@ -237,30 +217,35 @@ p { font-size: 16px; font-weight: 300; }
         background-color: #222222;
         border: none;
 		box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .3);
-    }
+	}
+	.name_logo{
+		margin-left: 5%;
+	}
+
+
 }
 
 /* 3. Header Section */
 
 .header-section {
-	background-image: url('../img/joshua-earle-14603-unsplash.jpg'); 
+	/* background-image: url(''); 
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover; */
 	/*background: #24C6DC;  /* fallback for old browsers */
 	/*background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
 	/*background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	height: 100%;
+	height: 80%;
 	width: 100%;
 	position: relative;
 }
 
 /* 3.1. Header Section Content */
 
-.header-section .header-section-content {
+.header-section-content {
 	color: whitesmoke;
 	text-shadow: 2px 2px black;
 	position: absolute;
@@ -278,6 +263,23 @@ p { font-size: 16px; font-weight: 300; }
 .header-section .header-section-content p {
 	margin-bottom: 0;
 }
+.header-section-content{
+	width:100%;
+	height:100%;
+	
+}
+
+.header-section-content video{
+	width: 100%;
+    height: 115%;
+}
+.content{
+	position: fixed;
+    bottom: 10%;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
 
 /* 3.2. Header Section Responsive Style */
 
@@ -286,12 +288,20 @@ p { font-size: 16px; font-weight: 300; }
 		line-height: 25px;
 		width: 100%;
 	}
+
+	.header-section-content video{
+		width: auto;
+		height: 115%;
+	}
+	
 }
+
+
 
 /* 4. About Section */
 
 .about-section {
-	padding: 80px 0;
+	padding: 5% 0;
 	background: #FFFFFF;
 }
 
@@ -300,8 +310,8 @@ p { font-size: 16px; font-weight: 300; }
 .about-section img {
 	border-color: white;
   	border-width: 15px;
-  	-moz-border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
-  	border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
+  	/* -moz-border-image: url(https://tobias-reinhardt.de/img/frame.png) 15 stretch;
+  	border-image: url(https://tobias-reinhardt.de/img/frame.png) 15 stretch; */
   	border-style: solid;
   	margin: auto;
 }
@@ -354,6 +364,10 @@ p { font-size: 16px; font-weight: 300; }
 	padding-top: 0;
 }
 
+.self-pic{
+	padding-top:5%;
+}
+
 .about-section-secondary .section-title h1 {
 	padding: 80px 0;
 	margin: 0;
@@ -380,6 +394,11 @@ p { font-size: 16px; font-weight: 300; }
 	margin-bottom: 0;
 }
 
+
+.list-unstyled > li svg{
+	width:35%;
+	height:auto;
+}
 /* 4.4. About Section Responsive Style */
 
 /* PRIMARY SECTION */
@@ -392,6 +411,56 @@ p { font-size: 16px; font-weight: 300; }
 	.about-section .about-description .section-title h1 {
 		padding: 0 0 80px 0;
 		margin: 0;
+	}
+
+	.header-section {
+		height:60%;
+		width:100%;
+	}
+
+	.header-section-content{
+		width:100%;
+		height:100%;
+		
+	}
+
+	.header-section-content video{
+		width: 100%;
+    	height: 138%;
+	}
+
+}
+
+@media (min-width: 1200px) {
+	
+	.header-section {
+		height:60%;
+		width:100%;
+	}
+
+	.header-section-content video{
+		width: 100%;
+    	height: 130%;
+	}
+
+
+}
+
+
+@media (max-width: 667px){
+	.header-section {
+		height:75%;
+	}
+	.header-section-content{
+		height:115%;
+	}
+
+	.header-section-content video{
+		height: 183%;
+		width: max-content;
+	}
+	.content{
+		bottom:10%;
 	}
 }
 
@@ -426,16 +495,24 @@ p { font-size: 16px; font-weight: 300; }
 .services-section .services-section-image {
 	text-align: left;
 }
+.img-responsive{
+	position: relative !important;
+	left:50% !important;
+	transform: translateX(-50%) !important;
+}
 
 /* 5.2. Services Section Content */
 
 .services-section h4 {
 	margin-top: 20px;
+	text-align: center;
 }
 
 .services-section p {
 	margin-bottom: 0;
 }
+
+
 
 /* 5.3. Services Section Callout */
 
@@ -472,6 +549,32 @@ p { font-size: 16px; font-weight: 300; }
 	text-decoration: none;
 	color: #404040;
 }
+.services-section {
+    text-align: center;
+}
+
+#technologies{
+	display: block;
+}
+#technologies .dev-icon{
+	width: 25%;
+    display: inline-block;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+.dev-icon svg{
+	margin:0 auto;
+}
+
+.dev-icon p {
+	text-transform:uppercase;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 5%;
+	white-space: nowrap;
+	font-size: 1em;
+	text-align:center;
+}
 
 /* 5.4. Services Section Responsive Style */
 
@@ -488,10 +591,19 @@ p { font-size: 16px; font-weight: 300; }
 	.services-section .mb-0 p {
 		margin-bottom: 0;
 	}
+	.img-responsive{
+		left:0% !important;
+		transform: translateX(-0%) !important;
+	}
+	
 }
 
 /* 6. Portfolio Section */
 
+.pic-link{
+	padding-left:0px !important;
+	padding-right:0px !important;
+}
 .portfolio-section {
 	background: #F8F8F8;
 	padding-bottom: 80px;
@@ -512,6 +624,32 @@ p { font-size: 16px; font-weight: 300; }
 }
 
 /* 6.2. Portfolio Section Content (Images) */
+
+.image-wrapper{
+	margin: 3%;
+	display: inline-flex;
+	justify-content: center;
+}
+
+.image-wrapper p{
+	display: inline-block;
+	width: 40%;
+	align-self: center;
+	padding: 0% 2% 2% 2%;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.image-wrapper .pic-link{
+	display: inline-block;
+	width:40%;
+}
+.image-overlay{
+	box-shadow: 2px 2px 5px darkslategrey;
+}
+.img-responsive{
+	box-shadow: 2px 2px 5px darkslategrey;
+}
 
 .portfolio-section .image-wrapper .image-overlay-text {
 	visibility:hidden;
@@ -556,6 +694,9 @@ p { font-size: 16px; font-weight: 300; }
   	opacity: 1;
 }
 
+#sgt{
+	position: relative;
+}
 /* 6.3. Portfolio Section Responsive Style */
 
 
@@ -632,13 +773,13 @@ p { font-size: 16px; font-weight: 300; }
 	border-right: none;
 }
 
-.footer-section .social-icons .icon-container:hover {
+.footer-section .social-icons a:hover {
 	background: #282828;
 	cursor: pointer;
 	transition: all .35s;
 }
 
-.footer-section .social-icons .icon-container a {
+.footer-section .social-icons a {
 	font-size: 36px;
 	color: #585858;
 }
@@ -647,10 +788,10 @@ p { font-size: 16px; font-weight: 300; }
     margin: 0;
 }
 
-.footer-section .social-icons .facebook:hover { color: #3b5998; }
-.footer-section .social-icons .twitter:hover { color: #00b6f1; }
-.footer-section .social-icons .google:hover { color: #df4a32; }
-.footer-section .social-icons .instagram:hover { color: #c32aa3; }
+.footer-section .social-icons a:nth-child(1):hover { color: #3b5998; }
+.footer-section .social-icons a:nth-child(2):hover { color: #00b6f1; }
+.footer-section .social-icons a:nth-child(3):hover { color: #df4a32; }
+.footer-section .social-icons a:nth-child(4):hover { color: #c32aa3; }
 
 /* 8.2. Footer Section Copyright */
 
@@ -669,6 +810,11 @@ p { font-size: 16px; font-weight: 300; }
 }
 
 /* 8.3. Footer Section Responsive Style */
+.item > svg{
+	width:20%;
+	height:auto;
+}
+
 
 @media (max-width: 767px) {
 	.footer-section .social-icons .icon-container {
@@ -676,5 +822,138 @@ p { font-size: 16px; font-weight: 300; }
 	}
 	.footer-section .social-icons .icon-container:last-child {
 		border: none;
+	}
+	.item > svg{
+		left:0;
+		transform: translateX(0%);
+	}
+	.image-wrapper{
+		display: inline-block;
+	}
+	
+	.image-wrapper p{
+		display: block;
+		width: 80%;
+		align-self: center;
+		padding: 0% 2% 2% 2%;
+		margin: 2% auto;
+
+	}
+	
+	.image-wrapper .pic-link{
+		display:block;
+		width:80%;
+		margin: 2% auto;
+	}
+}
+
+@media (max-width: 992px) {
+	#sgt{
+		right:0;
+	}
+}
+
+.emailSent{
+	text-align: center;
+}
+
+
+/* Slide in image  */
+
+  .slide-in {
+	opacity: 0;
+	transition: all .5s;
+  }
+
+  .align-left.slide-in {
+	transform: translateX(-30%) scale(0.95);
+  }
+  
+  .align-right.slide-in {
+	transform: translateX(30%) scale(0.95);
+  }
+
+  .slide-in.active {
+	opacity: 1;
+	transform: translateX(0%) scale(1);
+  }
+
+  /* Cpu images */
+
+
+
+  #cpu-container{
+	width: 100%;
+}
+
+.desktop {
+    width: 30%;
+    position: relative;
+	margin-top: 5%;
+	display: inline-block;
+	vertical-align: top;
+}
+.mobile{
+    width: 30%;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.desktop .mount{
+    width: 100%;
+    height: auto; 
+    overflow: hidden; 
+    z-index: 2;
+}
+.screenshot-desktop{
+	position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 1;
+    width: 91%;
+    padding-top: 4.5%;
+}
+
+.mobile .mount {
+    width: 75%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+	z-index: 2;
+	
+}
+
+.screenshot-mobile{
+    position: absolute;
+    top: 18%;
+    left: 30%;
+    z-index: 1;
+    width: 41%;
+}
+
+#cpu-container .text{
+	width: 30%;
+	display: inline-block;
+}
+
+@media screen and (max-width:768px){
+	.mobile .mount {
+		padding-top: 5px;
+	}
+	.desktop{
+		width: 45%;
+		margin-left: 10%;
+	}
+	.mobile{
+		width:30%;
+	}
+	#cpu-container .text{
+		text-align: center;
+		width: 80%;
+		margin: 0 auto;
+		display: block;
 	}
 }
