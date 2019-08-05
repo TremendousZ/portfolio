@@ -448,9 +448,7 @@ p { font-size: 16px; font-weight: 300; }
 
 
 @media (max-width: 667px){
-	.header-section {
-		height:75%;
-	}
+	
 	.header-section-content{
 		height:115%;
 	}
@@ -706,6 +704,7 @@ p { font-size: 16px; font-weight: 300; }
 .contact-section {
 	background: #FFFFFF;
 	padding-bottom: 80px;
+	text-align: center;
 }
 
 .contact-section .section-title h1 {
@@ -938,6 +937,11 @@ p { font-size: 16px; font-weight: 300; }
 	width: 30%;
 	display: inline-block;
 }
+#home-mobile{
+	display: none;
+}
+
+ /* Media Queries */
 
 @media screen and (max-width:768px){
 	.mobile .mount {
@@ -946,14 +950,52 @@ p { font-size: 16px; font-weight: 300; }
 	.desktop{
 		width: 45%;
 		margin-left: 10%;
+		margin-top:5%;
+		margin-bottom: 5%;
 	}
 	.mobile{
-		width:30%;
+		width:38%;
+		margin-top:5%;
+		margin-bottom: 5%;
 	}
 	#cpu-container .text{
+		padding-top: 10%;
 		text-align: center;
 		width: 80%;
 		margin: 0 auto;
 		display: block;
 	}
+	.slide-in{
+		opacity: 1;
+	}
+
+	#home{
+		display: none;
+	}
+
+	#home-mobile{
+		display: block;
+		background-position: center;
+		position: relative;
+		background-size: cover;
+	}
+	#home-mobile div img {
+		height: 100%;
+	}
+/* 
+	.rotate {
+		position:absolute;
+		animation: rotation 10s infinite linear;
+		width: 200vw;
+		z-index: -1;
+	} */
+	
+	@keyframes rotation {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+		  transform: rotate(359deg);
+		}
+	  }
 }
